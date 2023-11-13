@@ -153,7 +153,6 @@ function KTNS(instancia,tarefas) {
       // ADICIONA AO ARRAY O TEMPO GASTO COM AS TROCAS
       temporizador.push((trocasNestaTarefa * tempoTrocaFerramenta) * -1);
       // ADICIONA AO ARRAY O TEMPO GASTO COM ESTA TAREFA
-      // temporizador.push(tempoProcessamentoTarefa[i]);
       temporizador.push(tempoProcessamentoTarefa[tarefas[i]]);
     }
 

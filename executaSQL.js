@@ -3,10 +3,10 @@ function executarSQL(query, values, res){
     // CONFIGURA A CONEXÃO
     const connection = mysql.createConnection({
       host     : process.env.HOST,
-      port     : process.env.PORTA,
-      user     : process.env.USUARIO,
-      password : process.env.PASSWORD,
-      database : process.env.DATABASE,
+      port     : process.env.PORT,
+      user     : process.env.USER,
+      password : process.env.PASS,
+      database : process.env.BASE,
     });
 
     // EXECUTA A QUERY

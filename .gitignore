@@ -1,5 +1,9 @@
 node_modules
 build
+build-dev
+build-prod
+instancias
+resultados
 npm-debug.log
 .nyc
 .env

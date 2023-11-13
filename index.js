@@ -26,8 +26,8 @@ const resolveProblema = require('./resolveProblema');
 const { otimizarMetodo1, otimizarMetodo2 } = require('./otimizadores');
 
 // INICIAR O SERVIDOR
-app.listen(3000,'localhost');
-console.log('API está rodando na porta 3000 ..');
+app.listen(process.env.PORTA, process.env.IP);
+console.log('API está rodando no endereço http://' + process.env.IP + ':' + process.env.PORTA + '/');
 
 // ROTA TAREFAS
 app.post("/distribuiTarefas", async (req, res) => {

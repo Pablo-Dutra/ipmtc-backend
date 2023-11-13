@@ -2,13 +2,16 @@ const fs = require("fs");
 const path = require("path");
 const mysql = require('mysql2');
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 // CONFIGURA A CONEXÃO
 const connection = mysql.createConnection({
-  host     : 'localhost',
-  port     : 3306,
-  user     : 'ipmtc',
-  password : '4268@fJfe#f4e',
-  database : 'ipmtc',
+  host     : process.env.HOST,
+  port     : process.env.PORT,
+  user     : process.env.USER,
+  password : process.env.PASS,
+  database : process.env.BASE,
 });
 
 // IMPORTA FUNÇÕES
@@ -211,4 +214,4 @@ async function resultadosEmMassa(diretorio,destino) {
   });
 }
 // DEFINE O DIRETÓRIO ONDE ESTÃO AS INSTÂNCIAS E PARA ONDE VÃO
-resultadosEmMassa("./instancias/todas","./instancias/Resultados/resultado.csv");
+resultadosEmMassa("./instancias","./resultados/resultadoHeuristica.csv");
